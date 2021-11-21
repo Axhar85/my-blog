@@ -3,13 +3,11 @@ import './App.css';
 
 function App() {
   return (
-    <div> 
-    <div className='container bg-blue-500 text-center p-5'>
-      App and conatiners
-    </div>
-    <div>
+   
+    <div className='max-w-screen-md mx-auto pt-20'>
+      
       <Home/>
-    </div>
+    
     </div>
   );
 }
