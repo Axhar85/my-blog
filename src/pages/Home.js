@@ -3,7 +3,7 @@ import React from "react";
 const Home = () => {
  return (
      <div className="mb-20">
-         <h1 className="sm:text-4xl text-2xl font-bold mt-6 text-gray-900">Welcome to My Blog</h1>
+         <h1 className="sm:text-4xl text-2xl font-bold mt-6 mb-6 text-gray-900">Welcome to My Blog</h1>
 
          <p className="mx-auto leading-relaxed text-base mb-4">
          Lorem Ipsum is simply dummy text of the printing and typesetting 
