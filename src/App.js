@@ -1,13 +1,16 @@
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { Routes } from 'react-router';
 import Home from './pages/Home';
 import About from './pages/About';
 import Article from './pages/Article';
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import { Routes } from 'react-router';
 import ArticleList from './pages/ArticleList';
+import NevBar from "./components/NevBar";
+
 
 function App() {
   return (
-    <Router> 
+   <Router> 
+     <NevBar />
     <div className='max-w-screen-md mx-auto pt-20'>
       <Routes> 
       <Route exact path='/' element={<Home />} /> 
@@ -17,7 +20,7 @@ function App() {
       
       </Routes>
     </div>
-    </Router>
+   </Router>
   );
 }
 
