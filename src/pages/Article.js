@@ -1,9 +1,9 @@
 import React from "react";
-import artilceContent from "./article-content"
+import articleContent from "./article-content"
 
 const Article = ({ match }) => {
     const name = match.params.name;
-    const article = artilceContent.find((article) => article.name === name);
+    const article = articleContent.find((article) => article.name === name);
     if (!article) return <h1>Article doesn't exists.</h1>
     return (
         <>
