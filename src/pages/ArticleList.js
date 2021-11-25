@@ -16,7 +16,7 @@ const ArticleList = () => {
                         overflow-hidden">
                             <Link to={`/article/${article.name}`}> 
                                 <img 
-                                    className=" md:h-36 w-full object-cover object-center"
+                                    className="lg:h-48 md:h-36 w-full object-cover object-center"
                                     src={article.thumbnail}
                                     alt="blog"
                                 />
