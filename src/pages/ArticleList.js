@@ -6,7 +6,7 @@ const ArticleList = () => {
     return (
         <>
          <h1 className="sm:text-4xl text-2xl font-bold mt-6 mb-6 text-gray-900">
-             ArticleLict
+             ArticleList
         </h1>
         <div className="container py-4 mx-auto">
             <div className="flex flex-wrap -m-4">
@@ -14,7 +14,13 @@ const ArticleList = () => {
                     <div key={index} className="p-4 md:w-1/2"> 
                         <div className="h-full border-2 border-gray-200 border-opacity-60 round-lg
                         overflow-hidden">
-                            <Link to={`/article/${article.name}`}> </Link>
+                            <Link to={`/article/${article.name}`}> 
+                                <img 
+                                    className=" md:h-36 w-full object-cover object-center"
+                                    src={article.thumbnail}
+                                    alt="blog"
+                                />
+                            </Link>
                         </div>
                     </div>
                 ))}
