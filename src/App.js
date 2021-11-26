@@ -5,6 +5,7 @@ import About from './pages/About';
 import Article from './pages/Article';
 import ArticleList from './pages/ArticleList';
 import NevBar from "./components/NevBar";
+import NotFound from "./pages/NotFound";
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
       <Route exact path='/About' element={<About />} /> 
       <Route exact path='/article/:name' element={<Article />} /> 
       <Route exact path='/ArticleList' element={<ArticleList />} /> 
+      <Route element={<NotFound />} /> 
       
       </Routes>
     </div>
