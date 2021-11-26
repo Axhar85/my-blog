@@ -27,9 +27,17 @@ const ArticleList = () => {
                                     {article.title}
                                     </h3>
                                 </Link>
+                                <p className="leading-relaxed mb-3"> {article.content[0].substring(0, 100)}... </p>
+                                <div className="flex-item-center flex-wrap">
+                                    <Link className="flex-bg-indigo-500 inline-flex item-center md:mb-2
+                                    lg:mb-0"
+                                     to={`/article/${article.name}`}>
+                                        Learn more....
+                                    </Link>
+                                </div>
                             </div>
-                        </div>
-                    </div>
+                        </div> 
+                   </div>
                 ))}
             </div>
         </div>
