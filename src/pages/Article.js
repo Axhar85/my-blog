@@ -3,6 +3,7 @@ import articleContent from "./article-content"
 import Articles from "../components/Articles";
 import NotFound from "./NotFound";
 import CommentsList from "../components/CommentsList";
+import AddCommentForm from "../components/AddCommentForm";
 
 const Article = ({ match }) => {
     const name = match.params.name;
@@ -32,6 +33,7 @@ const Article = ({ match }) => {
         </p>
             ))}
             <CommentsList comments={articleInfo.comment} />
+            <AddCommentForm articleName={name} setArticleInfo={setArticleInfo} />
             <h1 className='sm:text-2xl text-xl font-bold mt-4 mb-4 text-gray-900'>
                 Other Articles 
             </h1>
