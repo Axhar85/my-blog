@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import articleContent from "./article-content"
 import Articles from "../components/Articles";
 import NotFound from "./NotFound";
@@ -6,6 +6,18 @@ import NotFound from "./NotFound";
 const Article = ({ match }) => {
     const name = match.params.name;
     const article = articleContent.find((article) => article.name === name);
+
+    const [articleInfo, setArticleInfo] = useState({comment: []});
+
+    useEffect(() => {
+        const fetchData = async ()=> {
+            const result = await fetch(`http://localhost:8000/api/articles/${name}`)
+            const body = await result.json();
+            setArticleInfo(body);
+        }
+        fetchData();
+    },[name]);
+
     if (!article) return <NotFound />;
     const otherArticles = articleContent.filter(article => article.name !== name)
     return (
